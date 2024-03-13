@@ -1,0 +1,3 @@
+6.1
+- It print a message : You've chosen: No
+- Change it to: JOptionPane.showConfirmDialog(null,"Yes", "No", JOptionPane.YES_NO_OPTION);
