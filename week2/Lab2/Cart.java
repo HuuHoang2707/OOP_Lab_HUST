@@ -6,7 +6,10 @@ public class Cart {
     private ArrayList<DigitalVideoDisc> itemOrderd = new ArrayList<>();
 
     public void addDigitalVideoDisc(DigitalVideoDisc a) {
-        itemOrderd.add(a);
+        if (itemOrderd.size() == 20)
+            System.out.println("Your cart is maximum capity(20). Please remove some items to add new ones");
+        else
+            itemOrderd.add(a);
     }
 
     public void removeDigitalVideoDisc(DigitalVideoDisc a) {
