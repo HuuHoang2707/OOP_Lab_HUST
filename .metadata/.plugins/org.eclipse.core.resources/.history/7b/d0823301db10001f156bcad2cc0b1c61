@@ -1,0 +1,6 @@
+package hust.soict.globalict.aims;
+
+import java.swing.*
+public class GUI extends Frame {
+	
+}

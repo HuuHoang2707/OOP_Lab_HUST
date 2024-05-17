@@ -1,0 +1,8 @@
+package hust.soict.globalict.aims;
+
+import java.awt.*;
+import java.awt.event.ActionListener;
+
+public class GUI extends Frame {
+    
+}
