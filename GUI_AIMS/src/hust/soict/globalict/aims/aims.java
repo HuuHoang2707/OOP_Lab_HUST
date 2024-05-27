@@ -103,11 +103,11 @@ public class aims {
     			
     			if (id == 1) {
     				CompactDisc a = new CompactDisc("Hoang");
-    				Store.addDVD(a);
+    				Store.addMedia(a);
     			}
     			else {
     				CompactDisc a = new CompactDisc("Hoang");
-    				Store.removeDVD(a);
+    				Store.removeMedia(a);
     			}
     			break;
     			

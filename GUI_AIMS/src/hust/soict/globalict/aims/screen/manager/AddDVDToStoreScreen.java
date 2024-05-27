@@ -1,3 +1,4 @@
+
 package hust.soict.globalict.aims.screen.manager;
 import hust.soict.globalict.aims.store.*;
 import hust.soict.globalict.aims.media.*; 
@@ -6,7 +7,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.time.zone.ZoneOffsetTransitionRule.TimeDefinition;
 
-public class AddCDToStoreScreen extends JFrame{
+public class AddDVDToStoreScreen extends JFrame{
     private store Store;
     private JButton btnSubmit;
     public JTextField TfTitle, lengthInput, TfCost, TfID, TfCate, TfDirector, artistInput;
@@ -33,7 +34,7 @@ public class AddCDToStoreScreen extends JFrame{
                 new AddBookToStoreScreen(Store);
             }
         });
-        
+
         JMenuItem addCD = new JMenuItem ("Add CD");
         smUpdateStore.add(addCD);
         addCD.addActionListener(new ActionListener() {
@@ -51,6 +52,7 @@ public class AddCDToStoreScreen extends JFrame{
                 new AddDVDToStoreScreen(Store);
             }
         });
+        
         menu.add(smUpdateStore);
         
         JMenuBar menuBar = new JMenuBar();
@@ -79,7 +81,7 @@ public class AddCDToStoreScreen extends JFrame{
                 dispose();
 			    int numberIn = Integer.parseInt(lengthInput.getText());
                 float c = Float.parseFloat(TfCost.getText());
-                CompactDisc tmp = new CompactDisc(TfTitle.getText(), TfCate.getText(), TfDirector.getText(), numberIn ,c, artistInput.getText());
+                DigitalVideoDisc tmp = new DigitalVideoDisc(TfTitle.getText(), TfCate.getText(), TfDirector.getText(), numberIn ,c); 
                 Store.addMedia(tmp);
                 new StoreManagerScreen(Store);
             }
@@ -108,22 +110,18 @@ public class AddCDToStoreScreen extends JFrame{
         TfDirector = new JTextField();
         center.add(TfDirector);
 
-        center.add(new JLabel("Enter the artist of the CD you want to add: "));
-		artistInput = new JTextField(20);
-		center.add(artistInput);
-
         center.add(new JLabel("Enter the Category"));
         TfCate = new JTextField();
         center.add(TfCate);
 
-        center.add(new JLabel("Enter the length of the CD you want to add: "));
+        center.add(new JLabel("Enter the length of the DVD you want to add: "));
 		lengthInput = new JTextField(20);
 		center.add(lengthInput);
 
         return center;   
     }
 
-    public AddCDToStoreScreen (store Store) {
+    public AddDVDToStoreScreen (store Store) {
         this.Store = Store;
         
         Container cp = getContentPane();
