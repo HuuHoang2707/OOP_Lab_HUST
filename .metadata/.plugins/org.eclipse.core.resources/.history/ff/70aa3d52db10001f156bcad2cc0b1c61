@@ -1,6 +1,0 @@
-package hust.soict.globalict.aims.swing;
-import javax.swing.*;
-
-public class SwingAccumulator extends JFrame{
-	
-}

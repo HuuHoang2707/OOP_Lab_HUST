@@ -131,7 +131,7 @@ public class AddCDToStoreScreen extends JFrame{
         cp.add(createNorth(), BorderLayout.NORTH);
         cp.add(createCenter(), BorderLayout.CENTER);
         cp.add(createSouth(), BorderLayout.SOUTH);
-        
+
         setTitle("Store");
         setSize(1024, 768);
         setLocationRelativeTo(null);
